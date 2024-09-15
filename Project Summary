@@ -1,0 +1,27 @@
+In this project, we developed a Car Price Prediction Model using linear regression with the following steps:
+
+Data Loading and Preprocessing:
+We started by loading the dataset, which included features such as car name, year of purchase, selling price, present price, kilometers driven, fuel type, seller type, transmission type, and the number of owners.
+We removed the Car_Name column as it was irrelevant for price prediction.
+The Year feature was converted to the car's age (i.e., 2024 - Year), making it more useful in predicting price.
+Categorical features such as Fuel_Type, Seller_Type, and Transmission were converted into numerical values using one-hot encoding.
+
+Feature Selection and Splitting the Data:
+We selected relevant features such as Present_Price, Kms_Driven, Fuel_Type, Transmission, Seller_Type, Owner, and the newly created Car_Age as input features.
+The target variable was Selling_Price, the price at which the car is being sold.
+The dataset was split into training (80%) and testing (20%) sets.
+
+Model Building:
+A Linear Regression model was used to train the data using the LinearRegression class from scikit-learn.
+The model was trained on the training data and predictions were made on the testing data.
+
+Model Evaluation:
+The model's performance was evaluated using the Root Mean Squared Error (RMSE) and R² Score.
+RMSE provides an estimate of the difference between actual prices and predicted prices, while R² explains the proportion of variance captured by the model.
+
+Visualization:
+A visual representation was created by plotting a scatter plot of the actual car prices vs predicted prices.
+A red line on the plot represents perfect predictions, allowing us to visually inspect how well the model performed. Points close to this line indicate better predictions.
+
+Outcome:
+The project demonstrated how to preprocess data, train a linear regression model, evaluate its performance, and visualize the results. The model can predict car prices based on various factors like car age, kilometers driven, and other features.
